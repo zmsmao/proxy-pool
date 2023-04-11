@@ -1,16 +1,20 @@
+# redis的配置
 spring:
   redis:
     port: 6379
+# 服务对外开放的端口
 server:
   port: 8093
 
+# 爬取任务和校验ip的配置
 job:
   task:
-    #redis中ip数量小于指定数量爬取
+    # redis中有效的ip数量小于指定数量则爬取ip
     count-ip: 20
+    # 校验有效的ip 使用爬取的ip通过代理的方式模拟游览器请求发送指定url
     validity:
       http-url: "https://www.baidu.com/"
       https-url: "http://httpbin.org"
-      timeout-time: 20
+      # 代理请求校验失败的次数 超过此次数则加入黑名单
       fail-count: 2
 

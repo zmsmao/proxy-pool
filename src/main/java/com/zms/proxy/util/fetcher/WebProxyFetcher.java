@@ -285,13 +285,18 @@ public class WebProxyFetcher{
                 proxyIp.setSuccessCount(0);
                 proxyIp.setFailCount(0);
                 proxyIp.setSuccessRatio(0.0);
-                log.info("获取的ip代理================>> {}-->>{}" ,s[0],proxyIp.getSource() );
+                log.info("获取的ip代理================>> {}-->>{}", s[0], proxyIp.getSource());
                 redisBaseService.produce(RedisQueue.CRAWLING_KEY_CN.getValue(), proxyIp);
             }
-            url = "https://www.89ip.cn/index_"+index+".html";
+            url = "https://www.89ip.cn/index_" + index + ".html";
             Thread.sleep(waitTime);
         }
-
     }
 
+    @Async
+    @ExceptionHandler
+    @Retryable(value = Exception.class)
+    public void webProxyPool08() throws Exception {
+
+    }
 }
