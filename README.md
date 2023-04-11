@@ -99,9 +99,9 @@ java -jar proxy-pool-0.0.1.jar
 
 ​		在项目文件中，启用的代理爬取方法名，代理爬取方法位于``util/fetcher/WebProxyFetcher.java``类中，因为代理源不稳定，时	常改变，所以在代理源失效时，直接把其注释即可，以保证代理源是始终有效的。
 
-- 扩展
-
-  :one: 使用类似的代码，在其中实现自己的爬取逻辑，代码如下：
+- 扩展代理
+    
+    :one: 使用类似的代码，在其中实现自己的爬取逻辑，代码如下：
 
 ```java
     @Async
@@ -111,8 +111,9 @@ java -jar proxy-pool-0.0.1.jar
         
     }
 ```
+- 定时任务
 
-​		:two:在``util/job/RequestPoolJob.java``类中，加入如下代码:
+    :two:在``util/job/RequestPoolJob.java``类中，加入如下代码:
 
 ```java 
      log.info("开始爬取第八个网址============>>>");
