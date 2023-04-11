@@ -1,0 +1,16 @@
+spring:
+  redis:
+    port: 6379
+server:
+  port: 8093
+
+job:
+  task:
+    #redis中ip数量小于指定数量爬取
+    count-ip: 20
+    validity:
+      http-url: "https://www.baidu.com/"
+      https-url: "http://httpbin.org"
+      timeout-time: 20
+      fail-count: 2
+
