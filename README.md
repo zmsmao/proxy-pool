@@ -91,7 +91,7 @@ java -jar proxy-pool-0.0.1.jar
 | :dog: /list     | get    | 获取所有代理         | 可选参数: `?type=https` 过滤支持https的代理 |
 | :cat:/count     | get    | 查看代理数量         |                                             |
 
-
+---
 
 ### 如何扩展
 
@@ -152,6 +152,8 @@ java -jar proxy-pool-0.0.1.jar
 
 ​		:key:在此方法中，主要配置的是下次启动时，对于redis中的存取的ip管理，注释掉黑名单就可以在下次启动时减少校验次数，提高效率。
 
+---
+
 ### 代理来源
 
 ​		目前实现的采集免费代理网站有(排名不分先后, 下面仅是对其发布的免费代理情况, 付费代理测评可以参考[这里](https://zhuanlan.zhihu.com/p/33576641) )
@@ -166,7 +168,7 @@ java -jar proxy-pool-0.0.1.jar
 | 云代理       |  ✔    |     :star:     | :star2::star2: | [地址](http://www.ip3366.net/free/) | ``webProxyPool06()`` |
 | 89代理   |  ✔    | :star:    |    :star2::star2:    | [地址](https://www.89ip.cn/) | ``webProxyPool07()`` |
 
-
+---
 
 ### 贡献代码
 
