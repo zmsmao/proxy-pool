@@ -24,8 +24,6 @@ public class JobTaskPoolConfig {
         //校验有效的代理ip
         private String httpUrl ;
         private String httpsUrl ;
-        //超时时间
-        private Long  timeoutTime;
         private Long failCount;
 
     }

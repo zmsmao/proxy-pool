@@ -48,9 +48,10 @@ public class RedisQueueDisposableBeanRunning implements SmartLifecycle {
 //        有效的ip映射
         redisBaseService.delete(effMapKey);
         log.info("开启redis-ip校验==============>>");
+//		  支持的http校验
         proxyIpCheck.checkRedisQueueHttp();
-        //暂时不支持https校验
-//        proxyIpCheck.checkRedisQueueHttps();
+//        暂时不支持https校验
+//      proxyIpCheck.checkRedisQueueHttps();
         running = true;
     }
 
